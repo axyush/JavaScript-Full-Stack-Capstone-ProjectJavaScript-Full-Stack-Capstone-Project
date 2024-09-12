@@ -3,9 +3,16 @@ const MongoClient = require('mongodb').MongoClient;
 const fs = require('fs');
 
 // MongoDB connection URL with authentication options
-let url = `${process.env.MONGO_URL}`;
+//let url = `${process.env.MONGO_URL}`;
+// hardcoded for testing
+let url = 'mongodb://myAppUser:yollo88trunk@localhost:27017/myAppDB';
 let filename = `${__dirname}/gifts.json`;
-const dbName = 'giftdb';
+// sample:
+// const dbName = 'giftdb';
+// i changed next line
+// const dbName = `${process.env.DB_NAME}`;
+// hardcoded testing
+const dbName = 'myAppDB';
 const collectionName = 'gifts';
 
 // notice you have to load the array of gifts into the data object
