@@ -52,7 +52,7 @@ function MainPage() {
                 {gifts.map((gift) => (
                     <div key={gift.id} className="col-md-4 mb-4">
                         <div className="card product-card">
-                        // Task 4: Display gift image or placeholder */
+                        {/*Task 4: Display gift image or placeholder */}
                                 <div className="image-placeholder">
                                     {gift.image ? (
                                         <img src={gift.image} alt={gift.name} />
@@ -61,7 +61,7 @@ function MainPage() {
                                     )}
                                 </div>
 
-                         // Task 5: Display gift image or placeholder
+                         {/*Task 5: Display gift image or placeholder */}
 
                             <div className="card-body">
                                     <h5 className="card-title">{gift.name}</h5>
@@ -73,7 +73,7 @@ function MainPage() {
                                     </p>
                             </div>
 
-                            // Task 6: Display gift image or placeholder
+                           {/*Task 6: Display gift image or placeholder */}
                             <div className="card-footer">
                                    <button onClick={() => goToDetailsPage(gift.id)} className="btn btn-primary">
                                     View Details

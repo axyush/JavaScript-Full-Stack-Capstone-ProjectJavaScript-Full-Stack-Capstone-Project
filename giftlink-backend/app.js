@@ -13,11 +13,6 @@ const {loadData} = require("./util/import-mongo/index");
 
 const app = express();
 app.use("*",cors());
-// Attach giftRoutes to your Express app to handle routes 
-// under /api/gifts using the code app.use('/api/gifts', giftRoutes);
-app.use('/api/gifts', giftRoutes);
-// same for searchRoutes
-app.use('/api/search', searchRoutes);
 
 const port = 3060;
 
@@ -42,7 +37,7 @@ const logger = require('./logger');
 
 app.use(pinoHttp({ logger }));
 
-// Use Routes
+// Attach Routes to your Express app to handle routes 
 // Gift API Task 2: add the giftRoutes to the server by using the app.use() method.
 app.use('/api/gifts', giftRoutes);
 
