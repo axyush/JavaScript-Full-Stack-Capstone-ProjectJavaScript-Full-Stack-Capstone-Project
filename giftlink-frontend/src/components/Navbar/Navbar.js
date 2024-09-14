@@ -1,4 +1,12 @@
 import React from 'react';
+// there is no <Link> tag in standard html. so we need:
+import { Link } from 'react-router-dom';
+
+/*
+In React Router, the <Link> component is used to navigate between different routes 
+in a single-page application (SPA) without causing a full page reload.
+*/
+
 
 export default function Navbar() {
     return (
@@ -14,7 +22,7 @@ export default function Navbar() {
                         <a className="nav-link" href="/app">Gifts</a> {/* Updated Link */}                        
                     </li>
                 <li className="nav-item">
-                        <a className="nav-link" to="/app/search">Search</a>{/* link to search */}
+                        <Link className="nav-link" to="/app/search">Search</Link>{/* link to search */}
                     </li>
                
                 </ul>
