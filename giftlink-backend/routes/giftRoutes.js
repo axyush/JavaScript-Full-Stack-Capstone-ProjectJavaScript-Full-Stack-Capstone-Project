@@ -18,7 +18,7 @@ router.get('/', async (req, res,/* next*/) => {
         // Task 4: return the gifts using the res.json method
         res.json(gifts);
     } catch (e) {
-        logger.console.error('oops something went wrong', e)
+        logger.console.error('oops something went wrong', e);
         console.error('Error fetching gifts:', e);
         res.status(500).send('Error fetching gifts');
         /*next(e);*/
