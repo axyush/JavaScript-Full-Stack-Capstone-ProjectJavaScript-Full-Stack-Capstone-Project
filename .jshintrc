@@ -3,4 +3,8 @@
     "undef": true,
     "unused": true,
     "globalstrict": true
+     "env": {
+        "node": true,
+        "es6": true
+    }
 }
