@@ -1,4 +1,7 @@
 /*jshint esversion: 8 */
+"use strict"; // to enforce strict mode in JavaScript. had a problem with linting before that.
+// Strict mode helps catch common coding bugs by throwing errors 
+// for unsafe actions (like using undeclared variables).
 require('dotenv').config();
 
 const express = require('express');
@@ -6,7 +9,8 @@ const cors = require('cors');
 const pinoLogger = require('./logger');
 
 const connectToDatabase = require('./models/db');
-const {loadData} = require("./util/import-mongo/index");
+// linter had a problem with defining a variable we never use
+// const {loadData} = require("./util/import-mongo/index");
 
 
 const app = express();
@@ -44,8 +48,8 @@ app.use('/api/gifts', giftRoutes);
 app.use('/api/search', searchRoutes);
 
 
-// Global Error Handler
-app.use((err, req, res, next) => {
+// Global Error Handler. next was never used, linter had a problem with that.
+app.use((err, req, res, /*next*/) => {
     console.error(err);
     res.status(500).send('Internal Server Error');
 });
