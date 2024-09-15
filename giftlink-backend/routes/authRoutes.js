@@ -30,7 +30,13 @@ router.post('/register', async (req, res) => {
         const salt = await bcryptjs.genSalt(10);
         const hash = await bcryptjs.hash(req.body.password, salt);
         const email=req.body.email;
-        console.log('email is',email);
+                console.log('New User object:', {
+                    email: req.body.email,
+                    firstName: req.body.firstName,
+                    lastName: req.body.lastName,
+                    password: hash,
+                    createdAt: new Date(),
+                });
         const newUser = await collection.insertOne({
             email: req.body.email,
             firstName: req.body.firstName,
@@ -50,7 +56,7 @@ router.post('/register', async (req, res) => {
         res.json({ authtoken,email });
     } catch (e) {
         logger.error(e);
-        return res.status(500).send('Internal server error');
+        return res.status(500).json({ error: 'Internal server error', details: e.message });
     }
 });
 
