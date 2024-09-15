@@ -1,11 +1,7 @@
 {
-    "env": {
-        "node": true,
-        "es6": true
-    },
-    "esversion": 8,
-    "undef": true,
-    "unused": true,
-    "globalstrict": true
-     
+  "esversion": 8,
+  "globals": {
+    "console": true,
+    "require": true
+  }
 }
