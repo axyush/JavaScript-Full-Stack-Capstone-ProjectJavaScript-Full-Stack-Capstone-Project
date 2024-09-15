@@ -1,5 +1,11 @@
 /*jshint esversion: 8 */
-"use strict"; // to enforce strict mode in JavaScript. had a problem with linting before that.
+function myApp() {
+    'use strict';
+    console.log('Hello, World!');
+}
+
+myApp();
+// to enforce strict mode in JavaScript. had a problem with linting before that.
 // Strict mode helps catch common coding bugs by throwing errors 
 // for unsafe actions (like using undeclared variables).
 require('dotenv').config();
