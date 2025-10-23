@@ -29,7 +29,7 @@ router.post('/register', async (req, res) => {
 
         const salt = await bcryptjs.genSalt(10);
         const hash = await bcryptjs.hash(req.body.password, salt);
-        const email=req.body.email;
+        const email=req.body.email; 
                 console.log('New User object:', {
                     email: req.body.email,
                     firstName: req.body.firstName,
