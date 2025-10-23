@@ -20,7 +20,7 @@ function LoginPage() {
 
     //Step 1 - Task 6
     useEffect(() => {
-        if (sessionStorage.getItem('auth-token')) {
+        if (sessionStorage.getItem('auth-token')) { 
           navigate('/app')
         }
       }, [navigate])
