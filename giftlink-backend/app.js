@@ -5,7 +5,7 @@ function myApp() {
 }
 
 myApp();
-// to enforce strict mode in JavaScript. had a problem with linting before that.
+// to enforce strict mode in JavaScript. had a problem with linting before that. 
 // Strict mode helps catch common coding bugs by throwing errors 
 // for unsafe actions (like using undeclared variables).
 require('dotenv').config();
