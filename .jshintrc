@@ -3,5 +3,5 @@
   "globals": {
     "console": true,
     "require": true
-  }
+  } 
 }
