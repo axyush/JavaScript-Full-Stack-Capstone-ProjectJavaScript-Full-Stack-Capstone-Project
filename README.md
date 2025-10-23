@@ -11,7 +11,7 @@ Functionality:
 -Search functionality
 -Item details page
 -Registration page
--Login page
+-Login page 
 -Editable profile page
 -Comments section
 
