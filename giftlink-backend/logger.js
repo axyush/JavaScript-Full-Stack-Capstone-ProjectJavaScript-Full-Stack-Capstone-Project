@@ -8,7 +8,7 @@ if (process.env.NODE_ENV !== 'production') {
         level: 'debug',
         transport: {
             target: "pino-pretty",
-        },
+        }, 
     });
 } else {
     // production
